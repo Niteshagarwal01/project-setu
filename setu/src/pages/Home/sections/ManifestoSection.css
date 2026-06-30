@@ -1,0 +1,209 @@
+.manifesto {
+  background: var(--bg-parchment);
+  padding: var(--sp-24) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background text */
+.manifesto::before {
+  content: 'सत्य';
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  transform: translateY(-50%);
+  font-family: var(--font-devanagari);
+  font-size: 20rem;
+  color: var(--border-light);
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.manifesto__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+}
+
+/* ─── QUOTE ────────────────────────────────────── */
+.manifesto__quote-wrap {
+  position: relative;
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--sp-8) var(--sp-10);
+}
+
+.manifesto__quote-mark {
+  font-family: var(--font-display);
+  font-size: 12rem;
+  color: var(--gold);
+  opacity: 0.18;
+  position: absolute;
+  top: -2rem;
+  left: 1rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.manifesto__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-ink);
+  line-height: 1.45;
+  position: relative;
+  z-index: 1;
+}
+
+.manifesto__attribution {
+  margin-top: var(--sp-4);
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  color: var(--text-warm);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.manifesto__attribution-hi {
+  font-family: var(--font-devanagari);
+  font-size: var(--text-xs);
+  color: var(--gold-muted);
+  display: block;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: var(--sp-1);
+}
+
+/* ─── DIVIDER ──────────────────────────────────── */
+.manifesto__divider {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.manifesto__divider-text {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-warm);
+  white-space: nowrap;
+}
+
+.manifesto__divider-text-hi {
+  font-family: var(--font-devanagari);
+  font-size: var(--text-xs);
+  color: var(--gold-muted);
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+/* ─── STATS ────────────────────────────────────── */
+.manifesto__stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.manifesto__stat {
+  flex: 1;
+  padding: var(--sp-6) var(--sp-8);
+  text-align: center;
+}
+
+.manifesto__stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.manifesto__stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-ink);
+  margin-top: var(--sp-2);
+  line-height: 1.4;
+}
+
+.manifesto__stat-label-hi {
+  font-family: var(--font-devanagari);
+  font-size: 0.7rem;
+  color: var(--gold-muted);
+  font-weight: 300;
+  margin-top: var(--sp-1);
+}
+
+.manifesto__stat-desc {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-top: var(--sp-3);
+  max-width: 26ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.manifesto__stats-sep {
+  width: 1px;
+  align-self: stretch;
+  background: var(--border-cream);
+  margin: var(--sp-4) 0;
+}
+
+/* ─── BODY ─────────────────────────────────────── */
+.manifesto__body {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.manifesto__body p {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.manifesto__body strong {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.manifesto__body-hi {
+  font-family: var(--font-devanagari);
+  font-size: var(--text-sm);
+  color: var(--gold-muted);
+  font-weight: 300;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────── */
+@media (max-width: 768px) {
+  .manifesto__stats {
+    flex-direction: column;
+    gap: var(--sp-4);
+  }
+  .manifesto__stats-sep {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+    margin: 0 var(--sp-4);
+  }
+  .manifesto__quote-wrap { padding: var(--sp-6) var(--sp-4); }
+  .manifesto__divider { flex-direction: column; text-align: center; }
+  .manifesto::before { font-size: 10rem; }
+}

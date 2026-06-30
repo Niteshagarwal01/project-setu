@@ -1,0 +1,188 @@
+// All static/mock data for the prototype
+// Replace each export with real API calls in Phase 2
+
+// ─── HERITAGE MEMORY MAP PINS ──────────────────────
+export const memoryPins = [
+  {
+    id: 1,
+    lat: 28.6139,
+    lng: 77.2090,
+    type: 'cultural',
+    category: 'Sacred Heritage',
+    title: 'Hazrat Nizamuddin Dargah',
+    description: 'A Sufi shrine revered across faiths — Muslims, Hindus, and Sikhs gather here in shared devotion every Thursday evening for Qawwali.',
+    contributor: 'Aisha Siddiqui',
+    mediaType: 'audio',
+    language: 'Urdu / Hindi',
+    year: '14th century onward',
+    tags: ['Sufi', 'Inter-faith', 'Music', 'Delhi'],
+  },
+  {
+    id: 2,
+    lat: 26.4499,
+    lng: 80.3319,
+    type: 'cultural',
+    category: 'Oral Tradition',
+    title: 'Birha — The Songs of Separation',
+    description: 'Folk songs of the Ahir community documenting partition-era displacement. Passed through oral tradition, at risk of extinction with elders.',
+    contributor: 'Ramesh Yadav',
+    mediaType: 'video',
+    language: 'Awadhi',
+    year: 'c. 1947–present',
+    tags: ['Partition', 'Folk Music', 'Kanpur', 'Oral History'],
+  },
+  {
+    id: 3,
+    lat: 18.5204,
+    lng: 73.8567,
+    type: 'support',
+    category: 'Legal Aid',
+    title: 'Majlis Manch Legal Aid Clinic',
+    description: 'Free legal support for refugee and stateless persons. Open Mon–Fri, 10am–5pm. Walk-in accepted for asylum documentation.',
+    contributor: 'Verified NGO',
+    mediaType: 'resource',
+    language: 'Marathi / English',
+    contact: '+91-20-2553-0000',
+    tags: ['Legal Aid', 'Refugees', 'Pune'],
+  },
+  {
+    id: 4,
+    lat: 13.0827,
+    lng: 80.2707,
+    type: 'cultural',
+    category: 'Culinary Heritage',
+    title: 'The Tamil-Muslim Haleem Tradition',
+    description: 'A slow-cooked stew prepared identically by Tamil Brahmin and Tamil Muslim families — a living record of shared kitchens before political division.',
+    contributor: 'Priya Narayanan',
+    mediaType: 'photo',
+    language: 'Tamil',
+    year: 'Pre-1947 origin',
+    tags: ['Food', 'Coexistence', 'Chennai', 'Hindu-Muslim'],
+  },
+  {
+    id: 5,
+    lat: 32.7266,
+    lng: 74.8570,
+    type: 'cultural',
+    category: 'Architectural Heritage',
+    title: 'Sharada Peeth — The Lost Library',
+    description: 'Ancient Sanskrit seat of learning in PoK — pilgrimage site for Kashmiri Pandits, now inaccessible across the Line of Control.',
+    contributor: 'Rahul Dhar',
+    mediaType: 'photo',
+    language: 'Sanskrit / Kashmiri',
+    year: 'c. 6th century CE',
+    tags: ['Kashmir', 'Displaced', 'Sanskrit', 'Pandits'],
+  },
+];
+
+// ─── TRUTH BOUNTY MOCK SCORE ───────────────────────
+export const mockScoreCard = {
+  text: 'Viral video shows minority community attacking a temple in UP.',
+  scores: [
+    { label: 'Toxicity',         value: 84, color: '#CC2222', description: 'Severely toxic language' },
+    { label: 'Identity Attack',  value: 91, color: '#CC2222', description: 'Targets religious community' },
+    { label: 'Insult',           value: 67, color: '#C9A84C', description: 'Contains insult patterns' },
+    { label: 'Threat',           value: 42, color: '#C9A84C', description: 'Moderate threat markers' },
+    { label: 'Severe Toxicity',  value: 71, color: '#CC2222', description: 'High severity classification' },
+  ],
+  verdict: 'HIGH RISK',
+  verdictColor: '#CC2222',
+  evidenceCount: 3,
+  investigatorCount: 12,
+};
+
+// ─── TRUST BOUNTY LEADERBOARD ─────────────────────
+export const leaderboard = [
+  { rank: 1, name: 'Arjun Sharma',   handle: '@arjuns',    points: 2840, badge: 'Sentinel',   bounties: 47, tier: 'gold' },
+  { rank: 2, name: 'Zara Kashmiri',  handle: '@zarak',     points: 2190, badge: 'Investigator', bounties: 31, tier: 'silver' },
+  { rank: 3, name: 'Priya Menon',    handle: '@priyam',    points: 1756, badge: 'Analyst',     bounties: 28, tier: 'bronze' },
+  { rank: 4, name: 'Tarun Bose',     handle: '@tarunb',    points: 1340, badge: 'Verifier',    bounties: 19, tier: 'default' },
+  { rank: 5, name: 'Sana Mirza',     handle: '@sanam',     points: 980,  badge: 'Scout',       bounties: 14, tier: 'default' },
+];
+
+// ─── PULSE RADAR ZONES ────────────────────────────
+export const radarZones = [
+  {
+    id: 'mewat',
+    name: 'Nuh District, Haryana',
+    state: 'Haryana',
+    srts: 78,
+    status: 'CRITICAL',
+    trend: 'up',
+    submissions: 142,
+    avgToxicity: 81,
+    targetedGroup: 'Religious minority',
+    timeWindow: '6h',
+    coordinates: { lat: 28.1, lng: 77.0 },
+  },
+  {
+    id: 'manipur',
+    name: 'Churachandpur, Manipur',
+    state: 'Manipur',
+    srts: 61,
+    status: 'ELEVATED',
+    trend: 'up',
+    submissions: 87,
+    avgToxicity: 66,
+    targetedGroup: 'Ethnic community',
+    timeWindow: '6h',
+    coordinates: { lat: 24.3, lng: 93.7 },
+  },
+  {
+    id: 'kashmir',
+    name: 'Srinagar, J&K',
+    state: 'Jammu & Kashmir',
+    srts: 34,
+    status: 'NEUTRAL',
+    trend: 'stable',
+    submissions: 23,
+    avgToxicity: 28,
+    targetedGroup: null,
+    timeWindow: '6h',
+    coordinates: { lat: 34.0, lng: 74.8 },
+  },
+];
+
+// ─── SHANTI PILLARS ──────────────────────────────
+export const shantiPillars = [
+  {
+    num: '01',
+    pillar: 'Inter-community Dialogue',
+    hindi: 'संवाद',
+    feature: 'Truth Bounty + Heritage Map',
+    mechanism: 'Shared investigation builds trust across communities',
+    icon: 'MessageSquare',
+  },
+  {
+    num: '02',
+    pillar: 'Countering Misinformation',
+    hindi: 'सत्य',
+    feature: 'Reality Forge',
+    mechanism: 'Perspective API + community forensics at scale',
+    icon: 'Shield',
+  },
+  {
+    num: '03',
+    pillar: 'Refugee & Displaced Support',
+    hindi: 'आश्रय',
+    feature: 'Heritage Map — Support Layer',
+    mechanism: 'Verified NGO resource directory, geographically anchored',
+    icon: 'Home',
+  },
+  {
+    num: '04',
+    pillar: 'Historical Memory',
+    hindi: 'स्मृति',
+    feature: 'Heritage Map — Cultural Layer',
+    mechanism: 'Community-submitted, geolocated living archive',
+    icon: 'BookOpen',
+  },
+  {
+    num: '05',
+    pillar: 'Cross-Border Early Warning',
+    hindi: 'सतर्कता',
+    feature: 'Pulse Radar — SRTS',
+    mechanism: 'Aggregated tension scoring + automated NGO alerts',
+    icon: 'Radio',
+  },
+];

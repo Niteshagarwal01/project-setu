@@ -1,0 +1,81 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--dur-mid) var(--ease-smooth);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Primary — Royal Red */
+.btn-primary {
+  background: var(--red);
+  color: var(--text-light);
+  border: 1.5px solid var(--red);
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--red-deep);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-mid) var(--ease-smooth);
+}
+.btn-primary:hover::before { transform: scaleX(1); transform-origin: left; }
+.btn-primary:hover { box-shadow: var(--shadow-red); }
+
+/* Outline — Gold */
+.btn-outline {
+  background: transparent;
+  color: var(--gold-muted);
+  border: 1.5px solid var(--gold);
+}
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold-pale);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-mid) var(--ease-smooth);
+}
+.btn-outline:hover::before { transform: scaleX(1); transform-origin: left; }
+.btn-outline:hover { color: var(--red-deep); box-shadow: var(--shadow-gold); }
+
+/* Outline Dark — for red backgrounds */
+.btn-outline-dark {
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+}
+.btn-outline-dark::before { background: rgba(248,244,238,0.12); }
+.btn-outline-dark:hover { color: var(--text-light); }
+
+/* Ghost */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1.5px solid transparent;
+  padding: 0.85rem 1.25rem;
+}
+.btn-ghost:hover {
+  color: var(--red);
+  border-color: var(--border-cream);
+  background: var(--bg-parchment);
+}
